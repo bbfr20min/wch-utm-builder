@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20minutes - UTM Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="b_w_20min.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <a id="refresh-logo" href="#">
+                <img id="logo" src="img/logo.png" alt="20min logo" />
+            </a>
+            <p>click on the logo resets the page</p>
+            <h1 class="title">20minutes - UTM builder</h1>
+        </div>
+        <div class="utm-builder">
+            <form id="utm-form">
+                <div id="url-container">
+                    <label for="url-0">Your URL:</label>
+                    <input type="url" id="url-0" name="url-0" required>
+                </div>
+                
+                <button type="button" id="add-url">Add more URL(s)</button>
+                
+                <div class="utms">
+                    <div class="preset-buttons">
+
+                        <button class="preset" data-source="instagram" data-medium="social" data-campaign="storywch">Instagram</button>
+                        <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="mainwch" id="whatsapp-main">WhatsApp</button>              
+                        <button class="preset" data-source="facebook" data-medium="social">Facebook</button>
+                        <button class="preset" data-source="tiktok" data-medium="social">TikTok</button>
+                        <button class="preset" data-source="threads" data-medium="social" data-campaign="threadswch">Threads</button>
+                        <button class="preset" data-source="linkedin" data-medium="social">LnkDn org</button>
+                    </div>
+                    
+                    <div class="parameters">
+                        <label for="source">UTM Source:</label>
+                        <input type="text" id="source" name="source">
+                        <label for="medium">UTM Medium:</label>
+                        <input type="text" id="medium" name="medium">
+                        <label for="campaign">UTM Campaign:</label>
+                        <input type="text" id="campaign" name="campaign">
+                    </div>
+
+                    <button type="submit" id="generate-urls">Generate URLs</button>
+                </div>
+            </form>
+
+            <div id="generated-urls-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 20min Data Team</p>
+    </footer>
+</body>
+</html>
